@@ -28,6 +28,18 @@ class ClienteDao {
                                     $cliente -> getCnpj()));
         }
    }
+   
+   public function listar(){
+        $sql = "SELECT * FROM clientes";
+        
+        $conn = COnexao::getConexao();
+        $stmt = $conn -> prepare($sql);
+        $stmt -> execute();
+        $dados = $stmt -> fetchAll();
+        
+        return $dados;
+   }
+   
 }
 
 

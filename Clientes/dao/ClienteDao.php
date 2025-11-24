@@ -37,6 +37,8 @@ class ClienteDao {
         $stmt -> execute();
         $dados = $stmt -> fetchAll();
         
+        //TODO: Converter os dados em objetos ClientePF e ClientePJ
+        
         return $dados;
    }
    
